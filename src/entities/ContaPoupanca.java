@@ -34,4 +34,10 @@ public class ContaPoupanca extends Conta {
         double rendimento = this.saldo * reajusteMensal;
         this.saldo += rendimento;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Conta Poupança\nSaldo: R$%.2f\nReajuste: %.2f%%",
+            saldo, reajusteMensal * 100);
+    }
 }

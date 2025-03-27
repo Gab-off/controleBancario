@@ -43,11 +43,6 @@ public class ContaCorrente extends Conta {
 
     @Override
     public String toString() {
-        return "Saldo atual: " +
-            String.format("%.2f", saldo) +
-            "\nLimite especial: " +
-            String.format("%.2f", limiteEspecial) +
-            "\nSaldo total atualizado: " +
-            String.format("%.2f", limiteEspecial + saldo);
+        return String.format("Conta Corrente\nSaldo: R$%.2f\nLimite: R$%.2f", saldo, limiteEspecial);
     }
 }
