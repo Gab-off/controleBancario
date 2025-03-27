@@ -4,7 +4,7 @@ import exceptions.SaldoInsuficienteException;
 import exceptions.ValorMenorException;
 
 public class Conta {
-    private double saldo;
+    protected double saldo;
 
     public Conta() {
     }
@@ -30,7 +30,7 @@ public class Conta {
 
     public void sacar(double valor) {
         if (valor <= 0) {
-            throw new ValorMenorException("O Valor deve ser maior ou igual ao saldo.");
+            throw new ValorMenorException("O valor deve ser maior ou igual ao saldo.");
         } else if (valor > saldo) {
             throw new SaldoInsuficienteException("Saldo insuficiente para efetuar o saque.");
         }
