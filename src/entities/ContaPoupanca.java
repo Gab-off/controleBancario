@@ -29,7 +29,7 @@ public class ContaPoupanca extends Conta {
         if (reajusteMensal <= 0) {
             throw new ValorMenorException("Porcentagem do reajuste deve ser maior que 0 (ZERO).");
         }
-        
+
         this.reajusteMensal = reajusteMensal;
         double rendimento = this.saldo * reajusteMensal;
         this.saldo += rendimento;
